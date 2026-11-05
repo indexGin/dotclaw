@@ -1,0 +1,28 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="dotclaw-mark-title dotclaw-mark-desc">
+  <title id="dotclaw-mark-title">DotClaw</title>
+  <desc id="dotclaw-mark-desc">Aperture mark: one agent Dot held by an open orbit, with a session node parked in the gap.</desc>
+  <!--
+    Single source of truth for every raster brand asset.
+    Geometry is expressed on a 1024 grid, centred at (512, 512).
+
+      orbit ring : r = 300, stroke 56, 288deg drawn / 72deg gap centred up-right
+      node       : sits in the gap at 45deg above the 3 o'clock axis, r = 66
+      the Dot    : r = 158, dead centre
+
+    Do not hand-edit the PNGs. Regenerate with:  npm run brand:icons
+  -->
+  <rect width="1024" height="1024" rx="185" fill="#131A2B" />
+  <circle
+    cx="512"
+    cy="512"
+    r="300"
+    stroke="#2F54C9"
+    stroke-width="56"
+    stroke-linecap="round"
+    pathLength="360"
+    stroke-dasharray="288 72"
+    stroke-dashoffset="-351"
+  />
+  <circle cx="724" cy="300" r="66" fill="#A9BCFF" />
+  <circle cx="512" cy="512" r="158" fill="#4F74EE" />
+</svg>

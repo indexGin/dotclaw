@@ -321,125 +321,125 @@ html.dark.theme-neutral {
 }
 
 /* =====================================================
-   Orange theme — warm orange accent
-   Primary: Orange | Base: Warm Neutral
+   Dot theme — Ultramarine accent on the warm neutral base
+   Primary: #3d62dc family | Base: unchanged warm neutral
    ===================================================== */
-html.theme-orange {
+html.theme-dot {
   --background: #faf9f5;
   --foreground: #141413;
   --card: #f0eee6;
   --card-foreground: #141413;
   --popover: #f0eee6;
   --popover-foreground: #141413;
-  --primary: oklch(0.553 0.195 38.402);
-  --primary-foreground: oklch(0.98 0.016 73.684);
+  --primary: #2f54c9;
+  --primary-foreground: #f8fafc;
   --secondary: #f0eee6;
   --secondary-foreground: #141413;
   --muted: #f0eee6;
   --muted-foreground: #8b857d;
-  --accent: #f0eee6;
-  --accent-foreground: #141413;
+  --accent: #eef1fb;
+  --accent-foreground: #1e3188;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #ffffff;
   --border: #dad9d5;
   --input: #dad9d5;
-  --ring: oklch(0.708 0 0);
-  --brand-50: #fff7ed;
-  --brand-100: #ffedd5;
-  --brand-200: #fed7aa;
-  --brand-300: #fdba74;
-  --brand-400: #fb923c;
-  --brand-500: #f97316;
-  --brand-600: #ea580c;
-  --brand-700: #c2410c;
-  --chart-1: oklch(0.837 0.128 66.29);
-  --chart-2: oklch(0.705 0.213 47.604);
-  --chart-3: oklch(0.646 0.222 41.116);
-  --chart-4: oklch(0.553 0.195 38.402);
-  --chart-5: oklch(0.47 0.157 37.304);
+  --ring: #5b7cf2;
+  --brand-50: #f0f4ff;
+  --brand-100: #dce4ff;
+  --brand-200: #bccbfe;
+  --brand-300: #92a9ff;
+  --brand-400: #5b7cf2;
+  --brand-500: #3d62dc;
+  --brand-600: #2f54c9;
+  --brand-700: #1e3188;
+  --chart-1: #5b7cf2;
+  --chart-2: #22b8cf;
+  --chart-3: #7c5cf0;
+  --chart-4: #2f9e8f;
+  --chart-5: #e8912a;
   --surface: #fdfcfa;
   --sidebar-background: #faf9f6;
   --sidebar-foreground: #141413;
-  --sidebar-primary: oklch(0.646 0.222 41.116);
-  --sidebar-primary-foreground: oklch(0.98 0.016 73.684);
-  --sidebar-accent: #f0eee6;
-  --sidebar-accent-foreground: #141413;
+  --sidebar-primary: #2f54c9;
+  --sidebar-primary-foreground: #f8fafc;
+  --sidebar-accent: #eef1fb;
+  --sidebar-accent-foreground: #1e3188;
   --sidebar-border: #dad9d5;
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar-ring: #5b7cf2;
   --sidebar: oklch(0.985 0 0);
-  --code-block-bg: rgba(61, 61, 58, 0.05);
-  --inline-code-bg: rgba(61, 61, 58, 0.05);
-  --inline-code-text: rgb(138, 36, 36);
+  --code-block-bg: rgba(30, 49, 136, 0.06);
+  --inline-code-bg: rgba(30, 49, 136, 0.06);
+  --inline-code-text: #1e3188;
   --glass-bg: rgba(250, 249, 245, 0.65);
   --glass-bg-heavy: rgba(250, 249, 245, 0.85);
   --glass-border: rgba(218, 217, 213, 0.5);
 }
 
-html.dark.theme-orange {
+html.dark.theme-dot {
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.47 0.157 37.304);
-  --primary-foreground: oklch(0.98 0.016 73.684);
+  --primary: #5b7cf2;
+  --primary-foreground: #0b1020;
   --secondary: oklch(0.274 0.006 286.033);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --accent: #1b2440;
+  --accent-foreground: #dce4ff;
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: #ffffff;
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --ring: #92a9ff;
   --sidebar-background: #0f172a;
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.705 0.213 47.604);
-  --sidebar-primary-foreground: oklch(0.98 0.016 73.684);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #5b7cf2;
+  --sidebar-primary-foreground: #0b1020;
+  --sidebar-accent: #1b2440;
+  --sidebar-accent-foreground: #dce4ff;
   --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar-ring: #92a9ff;
   --surface: oklch(0.205 0 0);
-  --code-block-bg: rgba(200, 200, 195, 0.08);
-  --inline-code-bg: rgba(200, 200, 195, 0.1);
-  --inline-code-text: rgb(220, 140, 140);
+  --code-block-bg: rgba(146, 169, 255, 0.1);
+  --inline-code-bg: rgba(146, 169, 255, 0.12);
+  --inline-code-text: #bccbfe;
   --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  /* Brand color scale (Orange) — inverted for dark mode */
-  --brand-50: #431407;
-  --brand-100: #7c2d12;
-  --brand-200: #9a3412;
-  --brand-300: #c2410c;
-  --brand-400: #ea580c;
-  --brand-500: #f97316;
-  --brand-600: #fb923c;
-  --brand-700: #fdba74;
+  /* Brand color scale (Ultramarine) — inverted for dark mode */
+  --brand-50: #101733;
+  --brand-100: #1e3188;
+  --brand-200: #2f54c9;
+  --brand-300: #3d62dc;
+  --brand-400: #5b7cf2;
+  --brand-500: #92a9ff;
+  --brand-600: #bccbfe;
+  --brand-700: #dce4ff;
 
-  --chart-1: oklch(0.837 0.128 66.29);
-  --chart-2: oklch(0.705 0.213 47.604);
-  --chart-3: oklch(0.646 0.222 41.116);
-  --chart-4: oklch(0.553 0.195 38.402);
-  --chart-5: oklch(0.47 0.157 37.304);
+  --chart-1: #5b7cf2;
+  --chart-2: #22b8cf;
+  --chart-3: #7c5cf0;
+  --chart-4: #2f9e8f;
+  --chart-5: #e8912a;
   --sidebar: oklch(0.205 0 0);
   --glass-bg: rgba(15, 23, 42, 0.55);
   --glass-bg-heavy: rgba(15, 23, 42, 0.8);
   --glass-border: rgba(255, 255, 255, 0.08);
 }
 
-/* Orange floating nav active state */
-html.theme-orange .floating-nav-item.active {
-  background: rgba(249, 115, 22, 0.15);
+/* Dot floating nav active state */
+html.theme-dot .floating-nav-item.active {
+  background: rgba(61, 98, 220, 0.15);
   box-shadow:
-    0 2px 8px rgba(249, 115, 22, 0.15),
+    0 2px 8px rgba(61, 98, 220, 0.15),
     var(--glass-inner-shadow);
 }
-html.theme-orange .floating-nav-item.active::before {
+html.theme-dot .floating-nav-item.active::before {
   background: radial-gradient(
     circle,
-    rgba(249, 115, 22, 0.2) 0%,
+    rgba(61, 98, 220, 0.2) 0%,
     transparent 70%
   );
 }
@@ -942,37 +942,37 @@ pre code.hljs {
 
 /* =====================================================
    Landing Page — Hero, Glass Cards, Animations
-   Scoped orange theme: override tokens inside .landing-page
-   so buttons, links, badges, icons all render orange
-   regardless of the global theme setting.
+   Scoped brand theme: override tokens inside .landing-page
+   so buttons, links, badges, icons all render the Ultramarine
+   brand regardless of the global theme setting.
 
-   注意：登录页作为品牌入口固定使用橙色配色，不随用户主题
+   注意：登录页作为品牌入口固定使用 DotClaw Ultramarine 配色，不随用户主题
    偏好切换。这是产品决策，不要将这些 token 改回依赖 :root。
    ===================================================== */
 
-/* Landing-page scoped orange tokens (light mode) */
+/* Landing-page scoped brand tokens (light mode) */
 .landing-page {
-  --background: #fffbf5;
-  --foreground: #1c1210;
-  --primary: #f97316;
+  --background: #f7f9ff;
+  --foreground: #101425;
+  --primary: #2f54c9;
   --primary-foreground: #ffffff;
-  --ring: #f97316;
-  --muted: #f5ede4;
-  --muted-foreground: #8b7b6b;
-  --border: #ede3d8;
-  --input: #ede3d8;
-  --brand-50: #fff7ed;
-  --brand-100: #ffedd5;
-  --brand-200: #fed7aa;
-  --brand-300: #fdba74;
-  --brand-400: #fb923c;
-  --brand-500: #f97316;
-  --brand-600: #ea580c;
-  --brand-700: #c2410c;
-  --glass-bg: rgba(255, 251, 245, 0.6);
-  --glass-bg-heavy: rgba(255, 251, 245, 0.8);
-  --glass-border: rgba(237, 227, 216, 0.6);
-  --glass-shadow: 0 8px 32px rgba(180, 120, 60, 0.06);
+  --ring: #3d62dc;
+  --muted: #e9edf8;
+  --muted-foreground: #6b7391;
+  --border: #dfe4f2;
+  --input: #dfe4f2;
+  --brand-50: #f0f4ff;
+  --brand-100: #dce4ff;
+  --brand-200: #bccbfe;
+  --brand-300: #92a9ff;
+  --brand-400: #5b7cf2;
+  --brand-500: #3d62dc;
+  --brand-600: #2f54c9;
+  --brand-700: #1e3188;
+  --glass-bg: rgba(247, 249, 255, 0.6);
+  --glass-bg-heavy: rgba(247, 249, 255, 0.8);
+  --glass-border: rgba(223, 228, 242, 0.6);
+  --glass-shadow: 0 8px 32px rgba(47, 84, 201, 0.08);
   --glass-inner-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7);
   --glass-blur: 20px;
   --glass-saturate: 1.8;
@@ -980,27 +980,27 @@ pre code.hljs {
   --error-bg: #fee2e2;
 }
 
-/* Landing-page scoped orange tokens (dark mode) */
+/* Landing-page scoped brand tokens (dark mode) */
 .dark .landing-page {
-  --background: #1a1210;
-  --foreground: #f5ede4;
-  --primary: #fb923c;
-  --primary-foreground: #1a1210;
-  --ring: #fb923c;
-  --muted: #2a2018;
-  --muted-foreground: #a08b7a;
-  --border: #3a2a1e;
-  --input: #3a2a1e;
-  --brand-50: #431407;
-  --brand-100: #7c2d12;
-  --brand-200: #9a3412;
-  --brand-300: #c2410c;
-  --brand-400: #ea580c;
-  --brand-500: #f97316;
-  --brand-600: #fb923c;
-  --brand-700: #fdba74;
-  --glass-bg: rgba(26, 18, 16, 0.6);
-  --glass-bg-heavy: rgba(26, 18, 16, 0.8);
+  --background: #0b1020;
+  --foreground: #e9edf8;
+  --primary: #5b7cf2;
+  --primary-foreground: #0b1020;
+  --ring: #92a9ff;
+  --muted: #16203a;
+  --muted-foreground: #97a0bd;
+  --border: #223052;
+  --input: #223052;
+  --brand-50: #101733;
+  --brand-100: #1e3188;
+  --brand-200: #2f54c9;
+  --brand-300: #3d62dc;
+  --brand-400: #5b7cf2;
+  --brand-500: #92a9ff;
+  --brand-600: #bccbfe;
+  --brand-700: #dce4ff;
+  --glass-bg: rgba(11, 16, 32, 0.6);
+  --glass-bg-heavy: rgba(11, 16, 32, 0.8);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --glass-inner-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.06);
@@ -1052,13 +1052,13 @@ pre code.hljs {
      每个 blob 的具体 border-radius 在下面的 .landing-aurora-blob-N 中设置 */
 }
 
-/* Blob 1: warm peach-orange — top left */
+/* Blob 1: brand ultramarine — top left */
 .landing-aurora-blob-1 {
   width: 70vw;
   height: 65vh;
   top: -20%;
   left: -15%;
-  background: rgba(251, 146, 60, 0.12);
+  background: rgba(91, 124, 242, 0.14);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   animation: aurora-morph-1 20s ease-in-out infinite;
 }
@@ -1097,7 +1097,7 @@ pre code.hljs {
 }
 
 .dark .landing-aurora-blob-1 {
-  background: rgba(251, 146, 60, 0.08);
+  background: rgba(91, 124, 242, 0.1);
 }
 .dark .landing-aurora-blob-2 {
   background: rgba(167, 139, 250, 0.07);
@@ -1191,9 +1191,9 @@ pre code.hljs {
   -webkit-backdrop-filter: blur(12px);
 }
 
-/* Gradient text — orange spectrum */
+/* Gradient text — brand ultramarine spectrum */
 .landing-gradient-text {
-  background: linear-gradient(135deg, #ea580c 0%, #fb923c 50%, #f97316 100%);
+  background: linear-gradient(135deg, #1e3188 0%, #5b7cf2 50%, #3d62dc 100%);
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

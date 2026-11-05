@@ -48,25 +48,36 @@
   <body>
     <script>
       (function () {
-        var d = document.documentElement,
-          s =
-            localStorage.getItem('dotclaw-theme') ||
-            localStorage.getItem('dotclaw-theme');
+        var d = document.documentElement;
+        // Read a preference under the DotClaw key, falling back to the
+        // pre-rebrand `miniclaw-*` key and promoting it forward, so the rename
+        // neither resets a returning user's preferences nor flashes the wrong
+        // theme before React mounts.
+        function pref(key) {
+          var v = localStorage.getItem('dotclaw-' + key);
+          if (v !== null) return v;
+          var legacy = localStorage.getItem('miniclaw-' + key);
+          if (legacy !== null) {
+            localStorage.setItem('dotclaw-' + key, legacy);
+            localStorage.removeItem('miniclaw-' + key);
+          }
+          return legacy;
+        }
+        var s = pref('theme');
         if (
           s === 'dark' ||
           (s === 'system' &&
             window.matchMedia('(prefers-color-scheme: dark)').matches)
         )
           d.classList.add('dark');
-        var c =
-          localStorage.getItem('dotclaw-color-scheme') ||
-          localStorage.getItem('dotclaw-color-scheme');
-        if (c === 'orange') d.classList.add('theme-orange');
+        // 'orange' was the pre-rebrand name of the brand scheme: it is now
+        // 'dot', which is also the default. Add the class before paint so the
+        // first frame already uses the brand palette instead of flashing the
+        // bare :root theme.
+        var c = pref('color-scheme');
         if (c === 'neutral') d.classList.add('theme-neutral');
-        if (
-          (localStorage.getItem('dotclaw-font-style') ||
-            localStorage.getItem('dotclaw-font-style')) === 'anthropic'
-        )
+        else if (c !== 'default') d.classList.add('theme-dot');
+        if (pref('font-style') === 'anthropic')
           d.classList.add('font-anthropic');
       })();
     </script>

@@ -48,9 +48,9 @@ const SCHEME_OPTIONS: {
     preview: { bg: '#f8fafc', accent: '#0d9488', text: '#0f172a' },
   },
   {
-    value: 'orange',
-    label: '暖橙',
-    preview: { bg: '#faf9f5', accent: '#f97316', text: '#141413' },
+    value: 'dot',
+    label: 'DotClaw 蓝',
+    preview: { bg: '#faf9f5', accent: '#3d62dc', text: '#141413' },
   },
   {
     value: 'neutral',

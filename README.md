@@ -46,6 +46,25 @@ DotClaw 采用**智能体优先工作模型**：Agent 不是聊天窗口里的�
 - 中间栏切换 Agent、Workspace 与 Session；右侧是当前对话与运行状态。
 - 进入工作台后，可以在同一个界面里切换 Agent、Workspace 和对话上下文，不需要在多套工具之间搬运文件与上下文。
 
+下面是当前工作台的实际界面：
+
+<p align="center">
+  <img src="docs/screenshots/workbench.png" alt="DotClaw 智能体工作台" width="900" />
+</p>
+
+<p align="center">
+  <em>工作台：在同一个窗口中管理 Agent、Workspace、Session 与对话。</em>
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/capabilities.png" alt="DotClaw 能力库" width="49%" />
+  <img src="docs/screenshots/settings-models.png" alt="DotClaw 模型配置" width="49%" />
+</p>
+
+<p align="center">
+  <em>能力库与模型配置：把 Skills、MCP、Plugins 和 Provider 配置放在清晰的管理边界内。</em>
+</p>
+
 界面使用 React 19、Vite、Tailwind CSS 4 与 Radix UI 构建，同一套 Renderer 同时服务浏览器、PWA 与 Electron 桌面窗口。产品图标同时用于 Web/PWA、Electron 窗口和安装包资源：
 
 <p align="center">
@@ -203,40 +222,40 @@ npm run desktop:package
 
 ## 常用命令
 
-| 命令 | 说明 |
-| --- | --- |
-| `npm run dev:all` | 启动 Backend 与 Vite Web Client |
-| `npm run build:all` | 构建 Backend、Web Client 与 Agent Runner |
-| `npm run typecheck` | 检查 Backend TypeScript |
-| `make typecheck` | 执行 Backend、Web、Agent Runner 的完整类型与文档检查 |
-| `npm test -- --run` | 运行 Vitest 测试 |
-| `npm run desktop:typecheck` | 检查 Electron Main/Preload 类型 |
-| `npm run desktop:build` | 构建 Electron Main/Preload bundle |
-| `npm run desktop:package:dir` | 构建并生成目录形式的桌面应用 |
-| `npm run desktop:package` | 构建并打包桌面应用 |
-| `make backup` | 创建运行时数据备份 |
-| `make restore FILE=...` | 恢复指定备份 |
-| `make status` | 查看 Backend、日志和 Docker 状态 |
-| `make stop` | 停止当前端口上的 DotClaw 服务 |
+| 命令                          | 说明                                                 |
+| ----------------------------- | ---------------------------------------------------- |
+| `npm run dev:all`             | 启动 Backend 与 Vite Web Client                      |
+| `npm run build:all`           | 构建 Backend、Web Client 与 Agent Runner             |
+| `npm run typecheck`           | 检查 Backend TypeScript                              |
+| `make typecheck`              | 执行 Backend、Web、Agent Runner 的完整类型与文档检查 |
+| `npm test -- --run`           | 运行 Vitest 测试                                     |
+| `npm run desktop:typecheck`   | 检查 Electron Main/Preload 类型                      |
+| `npm run desktop:build`       | 构建 Electron Main/Preload bundle                    |
+| `npm run desktop:package:dir` | 构建并生成目录形式的桌面应用                         |
+| `npm run desktop:package`     | 构建并打包桌面应用                                   |
+| `make backup`                 | 创建运行时数据备份                                   |
+| `make restore FILE=...`       | 恢复指定备份                                         |
+| `make status`                 | 查看 Backend、日志和 Docker 状态                     |
+| `make stop`                   | 停止当前端口上的 DotClaw 服务                        |
 
 ## 配置入口
 
-| 环境变量 | 用途 | 默认值 |
-| --- | --- | --- |
-| `DOTCLAW_SERVER_URL` | Electron 要连接的 Backend 地址 | `http://127.0.0.1:3000` |
-| `DOTCLAW_RENDERER_URL` | Electron 要加载的 Renderer 地址，适合本地 Vite 开发 | 与 Server URL 相同 |
-| `DOTCLAW_CONTAINER_IMAGE` | Agent Runner 使用的容器镜像 | `indexgin/dotclaw-agent:latest` |
-| `CONTAINER_IMAGE` | 容器镜像的兼容覆盖项 | 同上 |
-| `DOTCLAW_ASSISTANT_NAME` | 主智能体的默认显示名 | `DotClaw` |
-| `WEB_PORT` | Makefile 启动 Backend 使用的端口 | `3000` |
-| `WEB_SESSION_SECRET` | Cookie 会话签名密钥 | 首次启动自动生成并持久化 |
-| `CONTAINER_TIMEOUT` | 单次 Agent 运行超时（毫秒） | `1800000` |
-| `IDLE_TIMEOUT` | 暖 Runner 空闲回收时间（毫秒） | `1800000` |
-| `MAX_CONCURRENT_CONTAINERS` | Docker 并发上限 | `20` |
-| `MAX_FILE_SIZE_MB` | Web/IM 入站文件大小上限 | `50` |
-| `CORS_ALLOWED_ORIGINS` | WebSocket Origin 白名单 | 仅 localhost |
-| `TRUST_PROXY` | 是否信任反向代理来源头 | `false` |
-| `TZ` | 调度时区 | 系统时区 |
+| 环境变量                    | 用途                                                | 默认值                          |
+| --------------------------- | --------------------------------------------------- | ------------------------------- |
+| `DOTCLAW_SERVER_URL`        | Electron 要连接的 Backend 地址                      | `http://127.0.0.1:3000`         |
+| `DOTCLAW_RENDERER_URL`      | Electron 要加载的 Renderer 地址，适合本地 Vite 开发 | 与 Server URL 相同              |
+| `DOTCLAW_CONTAINER_IMAGE`   | Agent Runner 使用的容器镜像                         | `indexgin/dotclaw-agent:latest` |
+| `CONTAINER_IMAGE`           | 容器镜像的兼容覆盖项                                | 同上                            |
+| `DOTCLAW_ASSISTANT_NAME`    | 主智能体的默认显示名                                | `DotClaw`                       |
+| `WEB_PORT`                  | Makefile 启动 Backend 使用的端口                    | `3000`                          |
+| `WEB_SESSION_SECRET`        | Cookie 会话签名密钥                                 | 首次启动自动生成并持久化        |
+| `CONTAINER_TIMEOUT`         | 单次 Agent 运行超时（毫秒）                         | `1800000`                       |
+| `IDLE_TIMEOUT`              | 暖 Runner 空闲回收时间（毫秒）                      | `1800000`                       |
+| `MAX_CONCURRENT_CONTAINERS` | Docker 并发上限                                     | `20`                            |
+| `MAX_FILE_SIZE_MB`          | Web/IM 入站文件大小上限                             | `50`                            |
+| `CORS_ALLOWED_ORIGINS`      | WebSocket Origin 白名单                             | 仅 localhost                    |
+| `TRUST_PROXY`               | 是否信任反向代理来源头                              | `false`                         |
+| `TZ`                        | 调度时区                                            | 系统时区                        |
 
 Provider 与渠道账号优先通过 Web 界面配置。系统设置的优先级是 `Web 持久设置 > 环境变量 > 代码默认值`。
 

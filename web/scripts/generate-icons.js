@@ -24,10 +24,7 @@ async function generateIcons() {
     const pngPath = join(publicDir, `icon-${size}.png`);
     console.log(`Generating ${pngPath}...`);
 
-    await sharp(sourceBuffer)
-      .resize(size, size)
-      .png()
-      .toFile(pngPath);
+    await sharp(sourceBuffer).resize(size, size).png().toFile(pngPath);
 
     console.log(`✓ Generated ${pngPath}`);
   }
@@ -48,7 +45,7 @@ async function generateIcons() {
       width: 512,
       height: 512,
       channels: 4,
-      background: { r: 217, g: 119, b: 6, alpha: 1 },
+      background: { r: 19, g: 26, b: 43, alpha: 1 }, // #131A2B — brand ink tile
     },
   })
     .composite([{ input: maskableBuffer, top: padding, left: padding }])
@@ -61,10 +58,7 @@ async function generateIcons() {
   const appleTouchIconPath = join(publicDir, 'apple-touch-icon-180.png');
   console.log(`Generating ${appleTouchIconPath}...`);
 
-  await sharp(sourceBuffer)
-    .resize(180, 180)
-    .png()
-    .toFile(appleTouchIconPath);
+  await sharp(sourceBuffer).resize(180, 180).png().toFile(appleTouchIconPath);
 
   console.log(`✓ Generated ${appleTouchIconPath}`);
 
